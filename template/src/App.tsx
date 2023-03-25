@@ -31,7 +31,7 @@ import {
 } from './components/meeting-info/useMeetingInfo';
 import {SetMeetingInfoProvider} from './components/meeting-info/useSetMeetingInfo';
 import {ShareLinkProvider} from './components/useShareLink';
-import Endcall from './pages/Endcall';
+// import Endcall from './pages/Endcall';
 
 //hook can't be used in the outside react function calls. so directly checking the platform.
 if (Platform.OS === 'ios') {
