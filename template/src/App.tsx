@@ -31,6 +31,7 @@ import {
 } from './components/meeting-info/useMeetingInfo';
 import {SetMeetingInfoProvider} from './components/meeting-info/useSetMeetingInfo';
 import {ShareLinkProvider} from './components/useShareLink';
+import WhiteBoard from './pages/WhiteBoard';
 // import Endcall from './pages/Endcall';
 
 //hook can't be used in the outside react function calls. so directly checking the platform.
@@ -99,6 +100,9 @@ const App: React.FC = () => {
               {/* {RenderCustomRoutes()} */}
               <Route exact path={'/'}>
                 <Redirect to={'/create'} />
+              </Route>
+              <Route exact path={'/whiteboard'}>
+                <WhiteBoard/>
               </Route>
               <Route exact path={'/authenticate'}>
                 {shouldAuthenticate ? <OAuth /> : <Redirect to={'/'} />}

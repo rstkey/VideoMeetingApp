@@ -19,6 +19,7 @@ import LocalVideoMute, {
   LocalVideoMuteProps,
 } from '../subComponents/LocalVideoMute';
 import Recording, {RecordingButtonProps} from '../subComponents/Recording';
+import WhiteBoard, {WhiteBoardButtonProps} from '../subComponents/WhiteBoard';
 import LocalSwitchCamera, {
   LocalSwitchCameraProps,
 } from '../subComponents/LocalSwitchCamera';
@@ -371,6 +372,15 @@ const Controls = () => {
                 marginHorizontal: 10,
               }}>
               <Recording />
+            </View>
+          )}
+          {width > BREAKPOINTS.sm && isHost && $config.CLOUD_RECORDING && (
+            <View
+              testID="recording-btn"
+              style={{
+                marginHorizontal: 10,
+              }}>
+              <WhiteBoard />
             </View>
           )}
         </>
